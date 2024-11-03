@@ -4,6 +4,18 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
+  "author": "Alexandre Brajeux",
+  "description": "Tailwind CSS plugin to enable tailwind container queries for both width and height",
+  "contributors": [
+    {
+      "name": "Kieran McHugh",
+      "url": "https://github.com/kieranm"
+    },
+    {
+      "name": "Alexandre Brajeux",
+      "url": "https://https://github.com/abrajeux"
+    }
+  ],
   "repository": "https://github.com/abrajeux/tailwindcss-container-queries-2d",
   "publishConfig": {
     "access": "public"
