@@ -1,11 +1,6 @@
 # @tailwindcss/container-queries
 
-A plugin for Tailwind CSS v3.2+ that provides utilities for container queries both for X and Y values.
-
-Forked from [tailwindcss/container-queries](https://github.com/tailwindlabs/tailwindcss-container-queries).
-
-Heavily inspired by [this PR](https://github.com/tailwindlabs/tailwindcss-container-queries/pull/7) from [@kieranm](https://github.com/kieranm).
-
+A plugin for Tailwind CSS v3.2+ that provides utilities for container queries both for width and height values.
 
 ## Installation
 
@@ -142,3 +137,10 @@ module.exports = {
   },
 }
 ```
+
+## Credits
+
+This plugin is based on the original work in [tailwindcss/container-queries](https://github.com/tailwindlabs/tailwindcss-container-queries) by [Tailwind Labs](https://github.com/tailwindlabs).
+
+Special thanks to [@kieranm](https://github.com/kieranm) for the [initial PR](https://github.com/tailwindlabs/tailwindcss-container-queries/pull/7) that inspired height-based queries.
+
