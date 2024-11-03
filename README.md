@@ -1,13 +1,18 @@
 # @tailwindcss/container-queries
 
-A plugin for Tailwind CSS v3.2+ that provides utilities for container queries.
+A plugin for Tailwind CSS v3.2+ that provides utilities for container queries both for X and Y values.
+
+Forked from [tailwindcss/container-queries](https://github.com/tailwindlabs/tailwindcss-container-queries).
+
+Heavily inspired by [this PR](https://github.com/tailwindlabs/tailwindcss-container-queries/pull/7) from [@kieranm](https://github.com/kieranm).
+
 
 ## Installation
 
 Install the plugin from npm:
 
 ```sh
-npm install @tailwindcss/container-queries
+npm install container-queries-2d
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -19,7 +24,7 @@ module.exports = {
     // ...
   },
   plugins: [
-    require('@tailwindcss/container-queries'),
+    require('container-queries-2d'),
     // ...
   ],
 }
@@ -27,39 +32,59 @@ module.exports = {
 
 ## Usage
 
-Start by marking an element as a container using the `@container` class, and then applying styles based on the size of that container using the container variants like `@md:`, `@lg:`, and `@xl:`:
+Start by marking an element as a container using the `@container` class. You can now apply styles based on the container’s width or height using the new `@w-*` and `@h-*` modifiers, in addition to the width-based container breakpoints like `@md:`, `@lg:`, and `@xl:`.
+
+### Applying Width and Height Breakpoints
+
+With this version, you can target styles based on either the width or height of the container. Use `@w-*` for width-based breakpoints and `@h-*` for height-based breakpoints. This allows for more granular control over responsive design.
+
+#### Width-Based Breakpoints
+For width-based styles, use the `@w-` prefix:
 
 ```html
 <div class="@container">
-  <div class="@lg:underline">
-    <!-- This text will be underlined when the container is larger than `32rem` -->
+  <div class="@w-lg:text-black">
+    <!-- This text turns black when the container width is larger than `32rem` -->
   </div>
 </div>
 ```
 
-By default we provide [container sizes](#configuration) from `@xs` (`20rem`) to `@7xl` (`80rem`).
+#### Height-Based Breakpoints
+For height-based styles, use the `@h-` prefix:
+
+```html
+<div class="@container">
+  <div class="@h-lg:text-black">
+    <!-- This text turns black when the container height is larger than `32rem` -->
+  </div>
+</div>
+```
+
+By default we provide [container sizes](#configuration) from `@5xs` (`4rem`) to `@7xl` (`80rem`).
 
 ### Named containers
 
-You can optionally name containers using a `@container/{name}` class, and then include that name in the container variants using classes like `@lg/{name}:underline`:
+You can optionally name containers using the `@container/{name}` class and use that name in container variants. With the new width- and height-based prefixes, you can specify named containers as well, such as `@w-lg/{name}` and `@h-lg/{name}`:
 
 ```html
 <div class="@container/main">
   <!-- ... -->
-  <div class="@lg/main:underline">
-    <!-- This text will be underlined when the "main" container is larger than `32rem` -->
+  <div class="@w-lg/main:text-red-500 @h-lg/main:bg-green-500">
+    <!-- This text turns red when the "main" container is wider than `32rem` -->
+    <!-- The background turns green when the "main" container is taller than `32rem` -->
   </div>
 </div>
 ```
 
 ### Arbitrary container sizes
 
-In addition to using one of the [container sizes](#configuration) provided by default, you can also create one-off sizes using any arbitrary value:
+In addition to using one of the [container sizes](#configuration) provided by default, you can also create one-off sizes using any arbitrary value for the container width or height:
 
 ```html
 <div class="@container">
-  <div class="@[17.5rem]:underline">
-    <!-- This text will be underlined when the container is larger than `17.5rem` -->
+  <div class="@w-[20rem]:underline @h-[30rem]:bg-yellow-200">
+    <!-- This text is underlined when the container width exceeds `20rem` -->
+    <!-- The background is yellow when the container height exceeds `30rem` -->
   </div>
 </div>
 ```
@@ -79,7 +104,7 @@ If you have configured Tailwind to use a prefix, make sure to prefix both the `@
 ```html
 <div class="tw-@container">
   <!-- ... -->
-  <div class="@lg:tw-underline">
+  <div class="@w-lg:tw-underline">
     <!-- ... -->
   </div>
 </div>
