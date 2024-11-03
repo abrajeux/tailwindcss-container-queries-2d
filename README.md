@@ -1,7 +1,7 @@
 # Tailwind Container Queries 2D
 
-[![npm](https://img.shields.io/npm/v/container-queries-2d.svg)](https://www.npmjs.com/package/tailwind-container-queries-2d)
-[![npm](https://img.shields.io/npm/dt/container-queries-2d.svg)](https://www.npmjs.com/package/tailwind-container-queries-2d)
+[![npm](https://img.shields.io/npm/v/tailwind-container-queries-2d.svg)](https://www.npmjs.com/package/tailwind-container-queries-2d)
+[![npm](https://img.shields.io/npm/dt/tailwind-container-queries-2d.svg)](https://www.npmjs.com/package/tailwind-container-queries-2d)
 
 A plugin for Tailwind CSS v3.2+ that provides utilities for container queries both for width and height values.
 
