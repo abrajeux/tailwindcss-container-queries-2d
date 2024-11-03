@@ -1,10 +1,10 @@
 {
-  "name": "@tailwindcss/container-queries",
-  "version": "0.1.1",
+  "name": "container-queries-2d",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
-  "repository": "https://github.com/tailwindlabs/tailwindcss-container-queries",
+  "repository": "https://github.com/abrajeux/tailwindcss-container-queries-2d",
   "publishConfig": {
     "access": "public"
   },
