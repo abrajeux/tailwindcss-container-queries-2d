@@ -110,7 +110,11 @@ If you have configured Tailwind to use a prefix, make sure to prefix both the `@
 By default we ship with the following configured values:
 
 | Name   | CSS                                          |
-| ------ | -------------------------------------------- |
+| ------ |----------------------------------------------|
+| `@5xs` | `@container (min-width: 4rem /* 64px */)`    |
+| `@4xs` | `@container (min-width: 8rem /* 128px */)`   |
+| `@3xs` | `@container (min-width: 12rem /* 192px */)`  |
+| `@2xs` | `@container (min-width: 16rem /* 256px */)`  |
 | `@xs`  | `@container (min-width: 20rem /* 320px */)`  |
 | `@sm`  | `@container (min-width: 24rem /* 384px */)`  |
 | `@md`  | `@container (min-width: 28rem /* 448px */)`  |
@@ -131,7 +135,7 @@ module.exports = {
   theme: {
     extend: {
       containers: {
-        '2xs': '16rem',
+        '8xl': '88rem',
       },
     },
   },
