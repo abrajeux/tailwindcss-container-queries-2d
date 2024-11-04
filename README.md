@@ -10,7 +10,7 @@ A plugin for Tailwind CSS v3.2+ that provides utilities for container queries bo
 Install the plugin from npm:
 
 ```sh
-npm install container-queries-2d
+npm install tailwind-container-queries-2d
 ```
 
 Then add the plugin to your `tailwind.config.js` file:
@@ -22,7 +22,7 @@ module.exports = {
     // ...
   },
   plugins: [
-    require('container-queries-2d'),
+    require('tailwind-container-queries-2d'),
     // ...
   ],
 }
