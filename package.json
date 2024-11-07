@@ -1,11 +1,23 @@
 {
   "name": "tailwind-container-queries-2d",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",
   "author": "Alexandre Brajeux",
   "description": "Tailwind CSS plugin to enable tailwind container queries for both width and height",
+  "keywords": [
+    "tailwindcss",
+    "tailwind",
+    "css",
+    "container-queries",
+    "container",
+    "queries",
+    "2d",
+    "width",
+    "height",
+    "responsive"
+  ],
   "contributors": [
     {
       "name": "Kieran McHugh",
